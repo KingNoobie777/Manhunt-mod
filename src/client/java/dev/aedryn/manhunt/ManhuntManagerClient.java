@@ -97,7 +97,7 @@ public final class ManhuntManagerClient implements ClientModInitializer {
             List<String> names = new ArrayList<>();
             Minecraft client = Minecraft.getInstance();
             if (client.level != null) {
-                client.level.players().forEach(player -> names.add(player.getGameProfile().getName()));
+                client.level.players().forEach(player -> names.add(player.getGameProfile().name()));
             }
             names.sort(Comparator.naturalOrder());
 
