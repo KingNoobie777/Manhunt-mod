@@ -27,7 +27,12 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '9.6'
+          gradle-version: '9.6.0'
+
+      - name: Verify Java and Gradle
+        run: |
+          java -version
+          gradle --version
 
       - name: Build Manhunt Manager
         run: gradle --no-daemon clean build
